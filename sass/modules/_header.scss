@@ -1,0 +1,160 @@
+/* Map */
+#map-bar-region {
+  #controls-region {
+    #controls {
+      margin-right: 19px !important;
+    }
+  }
+
+  #map-div {
+    #map-div_zoom_slider {
+      .esriSimpleSliderDecrementButton {
+        left: 30px !important;
+      }
+      .esriSimpleSliderIncrementButton {
+        left: 62px !important;
+      }
+    }
+  }
+
+  #locator-region {
+    width: inherit;
+    top: 235px !important;
+    left: inherit;
+
+    #locator {
+      margin-left: 95px;
+      height: 30px;
+    }
+  }
+
+  #title-bar-region {
+    #global-nav-region {
+      right: 33px !important;
+    }
+  }
+}
+
+
+/* Header */
+#banner-container {
+  margin-bottom: 40px;
+
+  #show-banner-region {
+
+    #main-message, #nav-download, #nav-subscribe {
+      float: none !important;
+    }
+
+    .rss-popover {
+      top: 5px;
+      right: 10px;
+      background: #fff;
+
+      .btn {
+        width: 80px;
+        top: 97px !important;
+        left: inherit !important;
+        right: 11px;
+      }
+    }
+
+    .map-bar-banner {
+
+      margin-top: 35px;
+      border-bottom: 0;
+
+      .map-bar-title {
+        font-family: inherit !important;
+      }
+
+      .hide{
+        display: inline-block !important;
+        visibility: visible;
+      }
+
+      #main-message {
+        display: inline-block;
+        margin-left: 3px;
+        font-size: 37px;
+        font-weight: 300;
+      }
+
+      #dataset-download-container {
+        display: inline-block;
+        float: right;
+
+        .btn {
+          position: absolute;
+          top: 58px;
+          left: 6px;
+          margin: 0;
+          background-color: $green;
+          box-shadow: none;
+          text-shadow: none;
+        }
+
+        #nav-subscribe {
+          color: $grey-text !important;
+          top: -15px;
+          right: 28px !important;
+          &::before {
+            position: absolute;
+            top: 3px;
+            right: -18px;
+          }
+        }
+
+        #nav-download {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+/* Subheader */
+#sub-nav-region {
+  height: 46px;
+  border: 0;
+  position: static !important;
+  margin-bottom: 60px;
+
+  .link, .link.selected {
+    height: 35px;
+  }
+  .link {
+    box-sizing: border-box;
+    width: 32.4%;
+    margin: 0;
+    background: $grey-content !important;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d4d4d4;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    span {
+      color: $grey-title;
+    }
+  }
+
+  .selected {
+    border-bottom: 0;
+    background: #fff !important;
+    span{
+      color: $grey-text;
+    }
+  }
+
+
+  .link:first-child {
+    border-right: none;
+  }
+
+  .link:last-child {
+    border-left: none;
+  }
+}
+
+.column-20 {
+  width: 100%;
+}

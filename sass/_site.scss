@@ -1,0 +1,11 @@
+body {
+  font-family:'Fira Sans', sans-serif;
+  color: $grey-text;
+
+  h3 {
+    font-family: inherit !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    color: $grey-title !important;
+  }
+}
