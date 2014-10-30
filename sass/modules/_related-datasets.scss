@@ -1,0 +1,42 @@
+.column-24 {
+  .header-container {
+    padding: 0;
+    .section-header {
+      margin: 20px 0;
+    }
+
+    .icon-help {
+      display: none;
+    }
+  }
+
+  #similar-datasets-region {
+    .column-4 {
+      padding: 0;
+    }
+
+    ul {
+      display: inline-block;
+      width: 100%;
+
+      li {
+        padding: 0;
+        margin: 0 5.5%;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+
+        img {
+          border: 0;
+        }
+      }
+    }
+    a {
+      line-height: 1.5;
+      color: $grey-text !important;
+    }
+  }
+}

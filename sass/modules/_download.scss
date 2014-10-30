@@ -1,0 +1,41 @@
+#show-banner-region {
+  .download-popover-container {
+    position: absolute;
+    top: 85px;
+    left: 7px;
+
+    .download-popover {
+      min-width: initial;
+      width: 174px;
+      background: #fff;
+
+      .dl-links{
+        padding: 0;
+      }
+
+      a, span {
+        float: none !important;
+        margin: 5px 0;
+        color: $grey-text;
+      }
+    }
+  }
+}
+
+.invisible-container {
+  .download-popover {
+    min-width: initial;
+    /* width: 174px; */
+    background: #fff;
+
+    .dl-links{
+      padding: 0;
+    }
+
+    a, span {
+      float: none !important;
+      margin: 5px 0;
+      color: $grey-text;
+    }
+  }
+}

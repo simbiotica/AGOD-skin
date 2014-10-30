@@ -1,0 +1,60 @@
+#dataset-info-card-region {
+  margin-left: 15px;
+
+  .section-header {
+    text-transform: none;
+    font-weight: 400 !important;
+    color: $grey-title !important;
+  }
+
+  ul {
+    margin-bottom: 0 !important;
+  }
+
+  #org-content, #dataset-meta-list {
+    font-size: 15px;
+  }
+
+  #org-content {
+    min-height: 0;
+
+    #dataset-org-name {
+      margin: 0;
+      font-size: 15px;
+      font-weight: bold;
+      color: $green;
+    }
+
+    #dataset-meta-stamps {
+      margin: 0 !important;
+      padding: 0;
+      .info-name {
+        color: $grey-text;
+      }
+      .card-author  {
+        font-weight: bold;
+        color: $green;
+      }
+    }
+  }
+
+  .info-tags {
+    color: $grey-text !important;
+    .info-tag {
+      color: $grey-text !important;
+    }
+  }
+
+  #dataset-meta-list {
+    margin: 0 0 15px 0 !important;
+    padding: 0;
+    a {
+      font-weight: bold;
+      color: $green;
+    }
+
+    .info-name, .no-license {
+      color: $grey-text;
+    }
+  }
+}

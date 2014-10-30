@@ -1,0 +1,43 @@
+#saved-layers {
+  background: none;
+  border: 0;
+
+  #my-layers {
+    color: $grey-text !important;
+    h4 {
+      color: $grey-title;
+      border: 0;
+    }
+
+    #fav-region {
+      border-left: 1px solid #e7e7e7;
+
+      a, #fav-drag-help {
+        color: inherit;
+        font-style: normal;
+      }
+
+      .fav-check {
+        float: none;
+        margin: 0 0 0 10px;
+      }
+
+      .fav-name {
+        max-width: none;
+      }
+
+      .favorite {
+          background: none;
+        a {
+          position: absolute;
+          left: 30px;
+          margin: 0;
+        }
+      }
+      .icon-delete {
+        margin: 0 0 0 15px;
+        float: left;
+      }
+    }
+  }
+}
