@@ -2,7 +2,12 @@
   background: none;
   border: 0;
 
+  #my-layers, h4 {
+    font-family: inherit !important;
+  }
+
   #my-layers {
+
     color: $grey-text !important;
     h4 {
       color: $grey-title;
@@ -13,6 +18,7 @@
       border-left: 1px solid #e7e7e7;
 
       a, #fav-drag-help {
+        padding: 0 0 0 8px;
         color: inherit;
         font-style: normal;
       }
@@ -32,11 +38,16 @@
           position: absolute;
           left: 30px;
           margin: 0;
+          max-width: 95%;
         }
       }
       .icon-delete {
         margin: 0 0 0 15px;
         float: left;
+        &:hover {
+          opacity: .3;
+          color: #000;
+        }
       }
     }
   }

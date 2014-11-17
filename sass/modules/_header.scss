@@ -1,5 +1,6 @@
 /* Map */
 #map-bar-region {
+  margin: 0;
   #controls-region {
     #controls {
       margin-right: 19px !important;
@@ -95,13 +96,24 @@
         }
 
         #nav-subscribe {
-          color: $grey-text !important;
-          top: -15px;
+          width: 100px;
+          padding: 3px 10px;
+          background: #97BD3D;
+          border-radius: 20px;
+          font-weight: 100;
+          text-align: center;
+          color: #fff !important;
+          top: 7px;
           right: 28px !important;
           &::before {
+            display: none;
             position: absolute;
             top: 3px;
             right: -18px;
+          }
+
+          &:hover {
+            text-decoration: none;
           }
         }
 

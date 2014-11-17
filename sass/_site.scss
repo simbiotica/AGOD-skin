@@ -1,11 +1,108 @@
 body {
+  max-width: 1600px;
+  min-width: 980px;
+  margin: 0 auto;
   font-family:'Fira Sans', sans-serif;
   color: $grey-text;
+  background: rgb(234,234,234);
 
   h3 {
     font-family: inherit !important;
     font-weight: 400 !important;
     text-transform: none !important;
     color: $grey-title !important;
+  }
+}
+
+.tooltip{
+  position: absolute;
+  background: rgba(#fff,1);
+  box-shadow: 0 2px 5px rgba(#000,0.25);
+  z-index: 21;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-transform: uppercase;
+  top: 100%;
+  left: 50%;
+  text-align: center;
+  padding: 10px;
+  @include transform(translate(-50%,10px));
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    @include transform(translate(-50%,-50%) rotate(45deg));
+    border-top: 1px solid #e5e5df;
+    border-left: 1px solid #e5e5df;
+  }
+}
+
+
+.submenu-tooltip {
+  position: absolute;
+  min-width: 150px;
+  background: rgba(#FFF,1);
+  box-shadow: 0 2px 5px rgba(#000,0.25);
+  z-index: 1;
+  visibility: hidden;
+  text-transform: none;
+  -webkit-backface-visibility: hidden;
+  &.top{
+    top: 100%;
+    left: 50%;
+    @include transform(translate(-50%,10px));
+    &:after{
+      top: 0;
+      left: 50%;
+      @include transform(translate(-50%,-50%) rotate(45deg));
+      border-top: 1px solid #e5e5df;
+      border-left: 1px solid #e5e5df;
+    }
+  }
+  &.bottom{
+    bottom: 100%;
+    left: 50%;
+    @include transform(translate(-50%,-10px));
+    &:after{
+      bottom: 0;
+      left: 50%;
+      @include transform(translate(-50%,50%) rotate(45deg));
+      border-bottom: 1px solid #e5e5df;
+      border-right: 1px solid #e5e5df;
+    }
+  }
+  @include transition(all 0.15s ease-in-out);
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #FFF;
+    z-index: 2;
+  }
+  li {
+    border-top: 1px solid #EAECEF;
+    font-size: 15px;
+    white-space: nowrap;
+    &:first-child { border-top: none;}
+    a,.link {
+      color: #444;
+      font-weight: 300;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      &:hover {
+        background: darken(#FFF,2%);
+      }
+    }
   }
 }

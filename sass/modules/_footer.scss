@@ -1,0 +1,258 @@
+footer {
+  font-family: 'Fira Sans', serif !important;
+  margin: 0 !important;
+
+  .container {
+    max-width: none;
+    padding: 0;
+    .apps-footer {
+      padding: 20px 0;
+      border-bottom: 1px solid #E5E5DF;
+
+      .inner {
+        width: 75%;
+        margin: 0 auto;
+        ul {
+          display: flex;
+          -webkit-box-pack: justify;
+          -webkit-box-align: stretch;
+          align-items: stretch;
+          li {
+            display: inline-block;
+            width: 16.666666%;
+            text-align: center;
+            opacity: .7;
+            a {
+              svg {
+                width: 30px;
+                height: 30px;
+                margin-bottom: -9px;
+                fill: #555;
+              }
+
+              }
+              h3 {
+                margin-top: 3px;
+                font-size: 12px;
+                text-align: center;
+                text-transform: uppercase !important;
+                color: #555;
+                line-height: 1.3em;
+              }
+
+              &:hover {
+                svg {
+                  fill: #97bd3d;
+                }
+
+                .fire {
+                  fill: #ed1846;
+                }
+
+                .commodities {
+                  fill: #e98300;
+                }
+            }
+          }
+        }
+      }
+    }
+
+    .site-map {
+      padding: 0 0 40px;
+      .inner {
+        width: 75%;
+        margin: 0 auto;
+        .row {
+          display: flex;
+          -webkit-box-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: stretch;
+          align-items: stretch;
+          padding: 40px 0;
+          border-bottom: 1px solid #E5E5DF;
+
+          .col {
+            width: 20%;
+
+            h3 {
+              a {
+                padding: 0 0 15px;
+                font-size:  14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: #555 !important;
+              }
+            }
+            ul {
+              margin: -10px 0 0;
+              li {
+                font-size: 13px;
+                padding: 5px 0;
+                a{
+                  color: #555 !important;
+                  text-decoration: none;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .partner-box {
+      padding: 0 0 40px;
+      .inner{
+        width: 75%;
+        margin: 0 auto;
+        h4 {
+          font-family: inherit;
+          font-size: 14px;
+          font-weight: 300;
+          padding: 0 0 15px;
+          color: #555;
+        }
+        .row {
+          .wri-logo {
+            display: inline-flex;
+            background: url(http://gfw-nav.herokuapp.com/assets/logos-s263fc82ab1.png) no-repeat;
+            background-position: 0 -367px;
+            width: 200px;
+            height: 70px;
+          }
+          .address {
+            display: inline-block;
+            float: right;
+            font-size: 14px;
+            text-align: right;
+            font-weight: 300;
+            line-height: 1;
+            strong, span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-logos {
+      .inner {
+        width: 75%;
+        margin: 0 auto;
+
+        .footer-logo {
+          display: block;
+          background: url('http://gfw-nav.herokuapp.com/assets/logos-s263fc82ab1.png') no-repeat;
+          margin: 0 auto;
+          width: 88px;
+          position: relative;
+          top: 50%;
+          -webkit-transform: translate(0, -50%);
+          -moz-transform: translate(0, -50%);
+          -ms-transform: translate(0, -50%);
+          -o-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+        }
+        .wri {
+          height: 31px;
+          width: 269px;
+          background-position: 0 -336px;
+        }
+        .google {
+          height: 52px;
+          background-position: 0 -1052px;
+        }
+        .esri {
+          height: 28px;
+          background-position: 0 -927px;
+        }
+        .universitymaryland {
+          height: 52px;
+          background-position: 0 -820px;
+        }
+        .unep {
+          height: 52px;
+          background-position: 0 -724px;
+        }
+        .imazon {
+          height: 52px;
+          background-position: 0 -1104px;
+        }
+        .cfgd {
+          height: 52px;
+          background-position: 0 -672px;
+        }
+        .osfac {
+          height: 57px;
+          background-position: 0 -568px;
+        }
+        .gfwca {
+          height: 44px;
+          background-position: 0 -776px;
+        }
+        .scanex {
+          height: 16px;
+          background-position: 0 -1201px;
+        }
+        .twrus {
+          height: 36px;
+          width: 147px;
+          background-position: 0 -437px;
+        }
+        .norwegian {
+          height: 55px;
+          background-position: 0 -872px;
+        }
+        .usaid {
+          height: 64px;
+          background-position: 0 -272px;
+        }
+        .gef {
+          height: 59px;
+          background-position: 0 -509px;
+        }
+        .ukaid {
+          height: 52px;
+          background-position: 0 -955px;
+        }
+        .tilia {
+          height: 38px;
+          background-position: 0 -1217px;
+        }
+        .goodall {
+          height: 36px;
+          width: 147px;
+          background-position: 0 -473px;
+        }
+        .cartodb {
+          height: 45px;
+          background-position: 0 -1007px;
+        }
+        .vizzuality {
+          height: 45px;
+          background-position: 0 -1156px;
+        }
+        .blueraster {
+          height: 45px;
+          width: 97px;
+          background-position: 0 -625px;
+        }
+      }
+    }
+
+    .terms {
+      font-size: 11px;
+      text-align: center;
+
+      a {
+        color: #555 !important;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
