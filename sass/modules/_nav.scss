@@ -277,7 +277,81 @@
 }
 
 #title-bar-region {
-  #title-bar-inner, #global-nav-region {
+
+  font-family: 'Fira Sans', serif !important;
+  box-shadow: none;
+  border-bottom: 1px solid $grey-content;
+  background-color: #F7F7F7;
+
+  #search-input-wrapper,.search-nav-item {
+    position: initial !important;
+    float: left;
+  }
+
+  #global-nav-region {
     display: none;
+  }
+
+  #gsearch {
+    float: left;
+    width: 180px;
+    min-width: initial;
+    max-width: initial;
+    height: 25px;
+    border: none;
+    font-size: 14px;
+    border-bottom: 2px solid #eee;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  input {
+    background-image: none;
+  }
+
+  #title-bar-inner {
+    overflow: hidden;
+    #refine-region {
+      display: inline-block !important;
+      float: left;
+      height: initial;
+      .container {
+        display: inline-block;
+        width: initial;
+        max-width: initial;
+
+        #tag-region {
+          display: inline-block;
+          padding: 0;
+          height: initial;
+        }
+      }
+    }
+    #search-region {
+      display: inline-block;
+      float: right;
+      transform: translateY(25%);
+
+      #search-input-wrapper {
+        width: initial;
+        height: initial;
+        margin: 0;
+        min-width: initial;
+        margin-right: 28px;
+        svg {
+          float: left;
+          width: 25px;
+          height: 25px;
+          opacity: .4;
+          vertical-align: middle;
+        }
+      }
+
+      #search-results-extent-button-region {
+        .icon-unchecked {
+          text-transform: none;
+        }
+      }
+    }
   }
 }

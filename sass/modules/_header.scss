@@ -1,9 +1,22 @@
 /* Map */
 #map-bar-region {
   margin: 0;
+
   #controls-region {
     #controls {
+      position: relative;
+      top: -20px;
       margin-right: 19px !important;
+      border: 1px solid #D9D9D9;
+
+      #map-change-size {
+        padding-left: 5px;
+        border: 1px solid #D9D9D9;
+
+        .map-resize {
+          box-shadow: none;
+        }
+      }
     }
   }
 
@@ -20,18 +33,12 @@
 
   #locator-region {
     width: inherit;
-    top: 235px !important;
     left: inherit;
+    top: 235px;
 
     #locator {
       margin-left: 95px;
       height: 30px;
-    }
-  }
-
-  #title-bar-region {
-    #global-nav-region {
-      right: 33px !important;
     }
   }
 }
