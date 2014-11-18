@@ -74,7 +74,7 @@
                 margin-right: 20px;
                 vertical-align: -webkit-baseline-middle;
 
-                &:nth-child(2):hover {
+                &:hover {
                   .sub-menu-portal {
                     visibility: visible;
                   }
@@ -150,12 +150,6 @@
                       text-transform: none;
                     }
                   }
-
-                  &::after {
-
-                  }
-
-
                 }
               }
             }
