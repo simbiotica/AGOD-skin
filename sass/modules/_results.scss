@@ -4,6 +4,7 @@
 }
 /* Results */
 #search-results-region {
+  min-height: 0;
   .dataset-thumb img, li, li:last-child {
     border: 0;
   }

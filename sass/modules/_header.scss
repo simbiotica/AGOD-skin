@@ -1,6 +1,6 @@
 /* Map */
 #map-bar-region {
-  margin: 0;
+  margin: 64px 0 0 0;
 
   #controls-region {
     position: absolute;
@@ -59,7 +59,7 @@
     min-width: 980px;
     width: 75%;
     left: 50%;
-    top: auto;
+    top: auto !important;
     bottom: 33px;
     margin: 0 auto;
     transform: translate(-50%, 0);
