@@ -3,42 +3,77 @@
   margin: 0;
 
   #controls-region {
-    #controls {
-      position: relative;
-      top: -20px;
-      margin-right: 19px !important;
-      border: 1px solid #D9D9D9;
+    position: absolute;
+    min-width: 980px;
+    width: 75%;
+    top: auto;
+    bottom: 35px;
+    left: auto;
+    right: 50%;
+    @include transform(translate(50%, 0));
 
-      #map-change-size {
-        padding-left: 5px;
+    .container {
+      margin: 0;
+      padding: 0;
+      #controls {
+        position: relative;
+        margin: 0;
         border: 1px solid #D9D9D9;
+        #map-type {
+          #map-change-size {
+            padding-left: 5px;
+            border: 1px solid #D9D9D9;
 
-        .map-resize {
-          box-shadow: none;
+            .map-resize {
+              box-shadow: none;
+            }
+          }
         }
       }
     }
+
   }
 
   #map-div {
     #map-div_zoom_slider {
+      position: absolute;
+      top: auto;
+      bottom: 35px;
+      left: 50%;
+      @include transform(translate(-50%, 0));
+      min-width: 980px;
+      width: 75%;
+      margin: 0;
+      padding: 0;
+
       .esriSimpleSliderDecrementButton {
-        left: 30px !important;
+        left: 0
       }
       .esriSimpleSliderIncrementButton {
-        left: 62px !important;
+        left: 32px;
       }
     }
   }
 
   #locator-region {
-    width: inherit;
-    left: inherit;
-    top: 235px;
+    min-width: 980px;
+    width: 75%;
+    left: 50%;
+    top: auto;
+    bottom: 33px;
+    margin: 0 auto;
+    transform: translate(-50%, 0);
+
+    .container {
+      margin: 0;
+      padding: 0;
+    }
 
     #locator {
-      margin-left: 95px;
+      position: relative;
+      left: 75px;
       height: 30px;
+      margin: 0;
     }
   }
 }
@@ -111,7 +146,7 @@
           text-align: center;
           color: #fff !important;
           top: 7px;
-          right: 28px !important;
+          right: 0 !important;
           &::before {
             display: none;
             position: absolute;

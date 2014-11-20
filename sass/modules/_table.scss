@@ -6,3 +6,25 @@
     text-align: inherit !important;
   }
 }
+
+#dataset-body-region {
+  margin-bottom: 25px;
+}
+
+#attribute-table {
+
+  .slick-header {
+    .slick-header-columns {
+      div {
+        &:last-child {
+          border-right: 1px solid transparent;
+        }
+      }
+    }
+  }
+
+  .slick-cell {
+    margin-right: 0;
+  }
+}
+

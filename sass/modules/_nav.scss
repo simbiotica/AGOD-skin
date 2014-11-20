@@ -57,7 +57,7 @@
                     .commodities {
                       fill: #e98300;
                     }
-                    .tooltip {
+                    .tooltip-header {
                       opacity: 1;
                       visibility: visible;
                     }
@@ -277,11 +277,19 @@
 }
 
 #title-bar-region {
-
   font-family: 'Fira Sans', serif !important;
   box-shadow: none;
   border-bottom: 1px solid $grey-content;
   background-color: #F7F7F7;
+
+  .container {
+    min-width: 980px;
+    width: 75%;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   #search-input-wrapper,.search-nav-item {
     position: initial !important;
@@ -293,15 +301,13 @@
   }
 
   #gsearch {
-    float: left;
+    min-width: 0;
     width: 180px;
-    min-width: initial;
-    max-width: initial;
     height: 25px;
     border: none;
-    font-size: 14px;
     border-bottom: 2px solid #eee;
     border-radius: 0;
+    font-size: 14px;
     background-color: transparent;
   }
 
@@ -310,27 +316,44 @@
   }
 
   #title-bar-inner {
-    overflow: hidden;
+    position: relative;
+    margin: 10px 0 0;
     #refine-region {
       display: inline-block !important;
-      float: left;
-      height: initial;
+      width: 50%;
+      height: 0;
+      margin: 0;
       .container {
         display: inline-block;
-        width: initial;
-        max-width: initial;
-
+        position: relative;
+        left: 50%;
+        min-width: 0;
+        width: auto;
+        padding: 0;
         #tag-region {
           display: inline-block;
+          height: auto;
           padding: 0;
-          height: initial;
+
+          .refine-list {
+            li {
+              margin: 0 3px 10px 0;
+              background-color: #F7F7F7;
+              .tooltip {
+                .tooltip-wrapper {
+                  display: none;
+                }
+              }
+            }
+          }
         }
       }
     }
     #search-region {
-      display: inline-block;
-      float: right;
-      transform: translateY(25%);
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      right: 0;
 
       #search-input-wrapper {
         width: initial;
@@ -345,9 +368,14 @@
           opacity: .4;
           vertical-align: middle;
         }
+
+        form {
+          display: inline-flex;
+        }
       }
 
       #search-results-extent-button-region {
+        min-width: 0;
         .icon-unchecked {
           text-transform: none;
         }
