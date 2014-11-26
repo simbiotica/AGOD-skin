@@ -1,11 +1,14 @@
 
 @import
   "compass",
+  "flexbox",
 
   'variables',
+  'mixins',
   'site',
   'typography',
 
+  'modules/dataset-index',
   'modules/favorites',
   'modules/results',
   'modules/header',

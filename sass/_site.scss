@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   max-width: 1600px;
   min-width: 980px;
@@ -5,6 +9,10 @@ body {
   font-family:'Fira Sans', sans-serif;
   color: $grey-text;
   background: rgb(234,234,234);
+
+  h1, h2, h3, h4 {
+    -webkit-font-smoothing: antialiased;
+  }
 
   h3 {
     font-family: inherit !important;

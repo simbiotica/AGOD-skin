@@ -1,0 +1,26 @@
+// Grid
+@mixin row($content:space-between,$items:stretch) {
+    @include display-flex();
+    @include justify-content($content);
+    @include align-items($items);
+}
+@mixin col ($per) {
+    width: percentage($per/100);
+    min-height: 1px;
+}
+
+
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
