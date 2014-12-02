@@ -101,7 +101,7 @@ footer {
               margin: -10px 0 0;
               li {
                 font-size: 13px;
-                padding: 5px 0;
+                font-weight: 300;
                 a{
                   color: #555 !important;
                   text-decoration: none;
@@ -131,10 +131,10 @@ footer {
         .row {
           .wri-logo {
             display: inline-flex;
-            background: url(http://gfw-nav.herokuapp.com/assets/logos-s263fc82ab1.png) no-repeat;
-            background-position: 0 -367px;
-            width: 200px;
             height: 70px;
+            width: 269px;
+            background: url('http://gfw-nav.herokuapp.com/assets/logos-seaab571ee0.png') no-repeat;
+            background-position: 0 -516px;
           }
           .address {
             display: inline-block;
@@ -145,6 +145,12 @@ footer {
             line-height: 1;
             strong, span {
               display: block;
+            }
+            strong {
+              font-weight: 400;
+            }
+            span {
+              margin: 8px 0 0;
             }
           }
         }
@@ -158,7 +164,7 @@ footer {
 
         .footer-logo {
           display: block;
-          background: url('http://gfw-nav.herokuapp.com/assets/logos-s263fc82ab1.png') no-repeat;
+          background: url('http://gfw-nav.herokuapp.com/assets/logos-seaab571ee0.png') no-repeat;
           margin: 0 auto;
           width: 88px;
           position: relative;
@@ -176,56 +182,56 @@ footer {
         }
         .google {
           height: 52px;
-          background-position: 0 -1052px;
+          background-position: 0 -1201px;
         }
         .esri {
           height: 28px;
-          background-position: 0 -927px;
+          background-position: 0 -1076px;
         }
         .universitymaryland {
           height: 52px;
-          background-position: 0 -820px;
+          background-position: 0 -969px;
         }
         .unep {
           height: 52px;
-          background-position: 0 -724px;
+          background-position: 0 -873px;
         }
         .imazon {
           height: 52px;
-          background-position: 0 -1104px;
+          background-position: 0 -1253px;
         }
         .cfgd {
           height: 52px;
-          background-position: 0 -672px;
+          background-position: 0 -821px;
         }
         .osfac {
           height: 57px;
-          background-position: 0 -568px;
+          background-position: 0 -717px;
         }
         .gfwca {
           height: 44px;
-          background-position: 0 -776px;
+          background-position: 0 -925px;
         }
         .scanex {
           height: 16px;
-          background-position: 0 -1201px;
+          background-position: 0 -1350px;
         }
         .twrus {
           height: 36px;
           width: 147px;
-          background-position: 0 -437px;
+          background-position: 0 -586px;
         }
         .norwegian {
           height: 55px;
-          background-position: 0 -872px;
+          background-position: 0 -1021px;
         }
         .usaid {
           height: 64px;
-          background-position: 0 -272px;
+          background-position: 0 -421px;
         }
         .gef {
           height: 59px;
-          background-position: 0 -509px;
+          background-position: 0 -658px;
         }
         .ukaid {
           height: 52px;
@@ -233,33 +239,34 @@ footer {
         }
         .tilia {
           height: 38px;
-          background-position: 0 -1217px;
+          background-position: 0 -1366px;
         }
         .goodall {
           height: 36px;
           width: 147px;
-          background-position: 0 -473px;
+          background-position: 0 -622px;
         }
         .cartodb {
           height: 45px;
-          background-position: 0 -1007px;
+          background-position: 0 -1156px;
         }
         .vizzuality {
           height: 45px;
-          background-position: 0 -1156px;
+          background-position: 0 -1305px;
         }
         .blueraster {
           height: 45px;
           width: 97px;
-          background-position: 0 -625px;
+          background-position: 0 -774px;
         }
       }
     }
 
     .terms {
-      font-size: 11px;
+      padding: 1em 0;
+      font-size: 12px;
+      font-weight: 300;
       text-align: center;
-
       a {
         color: #555 !important;
         &:hover {

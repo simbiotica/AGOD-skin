@@ -1,7 +1,6 @@
 #header {
   box-sizing: initial;
-  height: 32px !important;
-  padding: 3px 0;
+  height: 30px !important;
   border-bottom: 2px solid #e5e5df;
   box-shadow: none;
   background: #eee;
@@ -31,6 +30,7 @@
             }
 
             .apps {
+              height: 30px;
               float: left;
               background: #eee;
               li {
@@ -44,42 +44,18 @@
                   svg {
                     width: 25px;
                     height: 25px;
-                    fill: #555;
+                    fill: #B6B6BA;
                     vertical-align: -webkit-baseline-middle;
                   }
                   &:hover {
-                    svg {
-                      fill: #97bd3d !important;
-                    }
-                    h3 {
-                      color: #97bd3d !important;
-                      }
-                    }
-                  }
-                  .fire:hover {
-                  svg {
-                    fill: #ed1846 !important;
-                  }
-                  h3 {
-                    color: #ed1846 !important;
-                  }
-                }
+                    svg { fill: #555;}
 
-                .commodities:hover {
-                  svg {
-                    fill: #e98300 !important;
-                  }
-                  h3 {
-                    color: #e98300 !important;
+                    .tooltip-header {
+                      visibility: visible;
+                      opacity: 1;
+                    }
                   }
                 }
-                &:hover {
-                  .tooltip-header {
-                    visibility: visible;
-                    opacity: 1;
-                  }
-                }
-
               }
             }
 
@@ -91,12 +67,17 @@
                 position: relative;
                 display: inline-block;
                 margin-right: 20px;
-                vertical-align: -webkit-baseline-middle;
 
                 &:hover {
                   .sub-menu-portal {
                     visibility: visible;
                   }
+                }
+                span {
+                  vertical-align: -webkit-baseline-middle;
+                  font-size: 13px;
+                  color: $dark;
+                  text-transform: uppercase;
                 }
 
                 &:last-child {
@@ -245,6 +226,7 @@
           transform: translate(-50%, 10px);
           transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
           background: rgba(255,255,255, 1);
+          font-weight: 300;
 
           &:before {
             content: "";

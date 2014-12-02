@@ -82,7 +82,7 @@
                     border: none;
                     border-radius: 50px;
                     background: $dark;
-                    font: 14px normal 'Fira Sans', sans-serif;
+                    font: normal 14px "Fira Sans", sans-serif;
                     font-weight: 500;
                     color: $white;
                     text-transform: uppercase;
@@ -152,10 +152,10 @@
 
   .link-tags {
     position: absolute;
-    min-width: 989px;
+    min-width: 600px;
     z-index: 250;
     top: -41px;
-    left: 50%;
+    left: 31%;
     list-style-type: none;
     transform: translateX(-50%);
 
