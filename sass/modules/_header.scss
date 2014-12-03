@@ -101,7 +101,7 @@
 
 /* Header */
 #banner-container {
-  margin-bottom: 40px;
+  margin: 0 0 40px;
 
   #show-banner-region {
 
@@ -150,7 +150,7 @@
         .btn {
           position: absolute;
           top: 58px;
-          left: 6px;
+          left: -4px;
           margin: 0;
           background-color: $green;
           box-shadow: none;
@@ -188,6 +188,11 @@
   }
 }
 
+.dataset-left {
+  margin: 0;
+  padding: 0 5px;
+}
+
 /* Subheader */
 #sub-nav-region {
   height: 46px;
@@ -200,7 +205,7 @@
   }
   .link {
     box-sizing: border-box;
-    width: 32.4%;
+    width: 33.3%;
     margin: 0;
     background: $grey-content !important;
     text-transform: uppercase;
