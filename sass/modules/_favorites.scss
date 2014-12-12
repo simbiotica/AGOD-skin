@@ -1,49 +1,37 @@
 #saved-layers {
   background: none;
   border: 0;
-
-  #my-layers, h4 {
-    font-family: inherit !important;
-  }
-
+  #my-layers, h4 { font-family: inherit !important;}
   #my-layers {
-
-    color: $grey-text !important;
+    color: $dark !important;
     h4 {
-      color: $grey-title;
+      color: $dark;
       border: 0;
     }
-
     #fav-region {
       border-left: 1px solid #e7e7e7;
-
       a, #fav-drag-help {
         padding: 0 0 0 8px;
-        color: inherit;
+        color: $dark;
         font-style: normal;
       }
-
       .fav-check {
         float: none;
         margin: 0 0 0 10px;
       }
-
-      .fav-name {
-        max-width: none;
-      }
-
+      .fav-name { max-width: none;}
       .favorite {
           background: none;
         a {
           position: absolute;
+          max-width: 95%;
           left: 30px;
           margin: 0;
-          max-width: 95%;
         }
       }
       .icon-delete {
-        margin: 0 0 0 15px;
         float: left;
+        margin: 0 0 0 15px;
         &:hover {
           opacity: .3;
           color: #000;

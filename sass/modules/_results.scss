@@ -1,73 +1,83 @@
 /* Search */
-#search-results-nav #sort-by {
-  color: $grey-text;
-}
+#search-results-nav #sort-by { color: $dark;}
 /* Results */
 #search-results-region {
   min-height: 0;
-  .dataset-thumb img, li, li:last-child {
-    border: 0;
-  }
-
-  img {
-    height: 67px !important;
-  }
-
+  .dataset-thumb img, li { border: 0;}
+  img { height: 67px !important;}
   li {
-    height: inherit !important;
+    height: initial !important;
+    width: 95%;
+    .snippet {
+      a {
+        overflow: hidden;
+        height: inherit !important;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        line-height: 1.5em;
+        div {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
     &:nth-child(n+4) {
       img {
         max-width: none;
         max-height: none;
         height: 67px !important;
       }
-
-      .snippet {
-        a {
-          white-space: inherit;
-          line-height: 1.5;
-        }
-      }
     }
   }
-
   .invisible-container {
     top: 28px;
     bottom: 0;
     right: 0;
-
     .card-info-container {
       background: none;
-
       .attributes {
         font-family: 'Fira Sans';
         border-right: 0;
         text-transform: uppercase;
       }
     }
-  }
-
-  .result-main {
-    font-family: 'Fira Sans';
-    .snippet, .snippet > a {
-      font-size: 15px;
-      color: $grey-text;
+    .download-popover {
+      padding: 0;
+      .dl-links {
+        top: 0;
+        a, span {
+          margin: 0;
+          padding: .75em;
+          font: normal 13px 'Fira Sans', sans-serif;
+          font-weight: 300;
+          color: $dark;
+          text-decoration: none;
+          border-top: 1px solid #e5e5df;
+          transition: all 150ms linear;
+          &:hover { background: #ededed;}
+          &:first-child { border-top: none;}
+        }
+      }
     }
   }
-
+  .result-main {
+    font-family: 'Fira Sans';
+    position: static !important;
+    .snippet { height: initial;}
+    .snippet, .snippet > a {
+      font-size: 15px;
+      color: $dark;
+    }
+  }
   .card-title {
     font-family: inherit;
     max-width: 70%;
-
     a {
-      color: $grey-title;
-      &:visited {
-        color: $grey-title;
-      }
+      color: $dark;
+      &:visited { color: $dark;}
     }
-
     .result-credit, em {
-      color: $grey-text;
+      color: $dark;
     }
     em {
       margin-left: 10px;
@@ -75,54 +85,58 @@
       font-style: normal;
     }
   }
+  .result-main {
+    .snippet {
+      .no-desc { display: flex;}
+    }
+  }
   .card-author {
-    color: $green;
-    font-weight: bold;
+    color: $cGreen;
+    font-weight: 500;
   }
 }
-
-
 /* Pagination */
 #results-pagination-region {
   display: inline-block;
   width: 100%;
   margin-top: 15px;
   text-align: center;
-
-
   #pagination {
-
     #page-prev, .pagination-results,
     #page-next {
        display: inline-block;
        float: none;
-       color: $grey-text;
+       color: $dark;
     }
-
-
-
     .pagination-results {
       margin: 0;
-
       .page, a {
-        color: $grey-text;
+        color: $dark;
         border-right: none;
-        &:empty {
-          border-bottom: 2px $green solid;
-        }
+        &:empty { border-bottom: 2px $cGreen solid;}
       }
+      a { padding: 0 4px;}
+      .current { border-bottom: 3px solid $cGreen;}
+    }
+  }
+}
 
-      a {
-        padding: 0 4px;
-      }
+.dropdown {
+  color: $dark;
+  font-weight: 400;
+  &:hover { box-shadow: 0 -2px 3px rgba(0,0,0,0.25);}
+}
 
-      .current {
-        border-bottom: 3px solid $green;
-      }
-
-      /* li a {
-        border-bottom: 0;
-      } */
+.dropdown-menu {
+  box-shadow: 0 -2px 3px rgba(0,0,0,0.25);
+  .sort-option {
+    text-align: center;
+    border-top: 1px solid $border;
+    &:first-child { border-top: 0;}
+    &:hover { background: darken($white,2%);}
+    a {
+      font: normal 13px 'Fira Sans', serif;
+      font-weight: 300;
     }
   }
 }

@@ -6,23 +6,19 @@
     text-align: inherit !important;
   }
 }
-
 #dataset-body-region {
+  width: 100%;
   margin-bottom: 25px;
 }
 
 #attribute-table {
-
   .slick-header {
     height: 40px;
     .slick-header-columns {
       div {
         border-top: 3px solid transparent;
-        &:last-child {
-          border-right: 1px solid transparent;
-        }
+        &:last-child { border-right: 1px solid transparent;}
         span {
-
           &:first-child {
             position: absolute;
             top: 50%;
@@ -34,9 +30,6 @@
       }
     }
   }
-
-  .slick-cell {
-    margin-right: 0;
-  }
+  .slick-cell { margin-right: 0;}
 }
 

@@ -1,60 +1,40 @@
 #dataset-info-card-region {
   margin-left: 15px;
-
   .section-header {
     text-transform: none;
-    font-weight: 400 !important;
-    color: $grey-title !important;
+    color: $dark !important;
   }
-
-  ul {
-    margin-bottom: 0 !important;
-  }
-
-  #org-content, #dataset-meta-list {
-    font-size: 15px;
-  }
-
+  ul { margin-bottom: 0 !important;}
+  #org-content, #dataset-meta-list { font-size: 15px;}
   #org-content {
     min-height: 0;
-
     #dataset-org-name {
       margin: 0;
       font-size: 15px;
-      font-weight: bold;
-      color: $green;
+      font-weight: 400;
+      color: $cGreen;
     }
-
     #dataset-meta-stamps {
       margin: 0 !important;
       padding: 0;
-      .info-name {
-        color: $grey-text;
-      }
+      .info-name { color: $dark;}
       .card-author  {
-        font-weight: bold;
-        color: $green;
+        font-weight: 400;
+        color: $cGreen;
       }
     }
   }
-
   .info-tags {
-    color: $grey-text !important;
-    .info-tag {
-      color: $grey-text !important;
-    }
+    color: $dark !important;
+    .info-tag { color: $dark !important;}
   }
-
   #dataset-meta-list {
     margin: 0 0 15px 0 !important;
     padding: 0;
     a {
-      font-weight: bold;
-      color: $green;
+      font-weight: 400;
+      color: $cGreen;
     }
-
-    .info-name, .no-license {
-      color: $grey-text;
-    }
+    .info-name, .no-license { color: $dark;}
   }
 }

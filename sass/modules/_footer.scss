@@ -1,22 +1,23 @@
+.footer { padding: 0;}
 footer {
-  font-family: 'Fira Sans', serif !important;
+  min-width: 850px;
   margin: 0 !important;
-
+  font-family: 'Fira Sans', serif !important;
+  background: #edede8;
   .container {
     max-width: none;
     padding: 0;
     .apps-footer {
       padding: 20px 0;
       border-bottom: 1px solid #E5E5DF;
-
       .inner {
-        width: 75%;
         margin: 0 auto;
         ul {
           display: flex;
           -webkit-box-pack: justify;
           -webkit-box-align: stretch;
           align-items: stretch;
+          margin: 0;
           li {
             display: inline-block;
             width: 16.666666%;
@@ -24,47 +25,33 @@ footer {
             a {
               display: block;
               padding: 20px;
-
               svg {
                 width: 30px;
                 height: 30px;
                 margin-bottom: -9px;
                 fill: #555;
               }
-
               h3 {
                 margin-top: 3px;
                 font-size: 12px;
                 text-align: center;
                 text-transform: uppercase !important;
+                font-weight: 400 !important;
                 color: #555;
                 line-height: 1.3em;
               }
               &:hover {
-                svg {
-                  fill: #97bd3d !important;
-                }
-                h3 {
-                  color: #97bd3d !important;
-                }
+                svg { fill: #97bd3d !important;}
+                h3 { color: #97bd3d !important;}
               }
             }
             .fire:hover {
-              svg {
-                fill: #ed1846 !important;
-              }
-              h3 {
-                color: #ed1846 !important;
-              }
+              svg { fill: #ed1846 !important;}
+              h3 { color: #ed1846 !important;}
             }
-
             .commodities:hover {
-              svg {
-                fill: #e98300 !important;
-              }
-              h3 {
-                color: #e98300 !important;
-              }
+              svg { fill: #e98300 !important;}
+              h3 { color: #e98300 !important;}
             }
           }
         }
@@ -74,7 +61,6 @@ footer {
     .site-map {
       padding: 0 0 40px;
       .inner {
-        width: 75%;
         margin: 0 auto;
         .row {
           display: flex;
@@ -82,12 +68,10 @@ footer {
           justify-content: space-between;
           -webkit-box-align: stretch;
           align-items: stretch;
-          padding: 40px 0;
+          padding: 20px 0 40px 0;
           border-bottom: 1px solid #E5E5DF;
-
           .col {
             width: 20%;
-
             h3 {
               a {
                 padding: 0 0 15px;
@@ -95,19 +79,20 @@ footer {
                 font-weight: 500;
                 text-transform: uppercase;
                 color: #555 !important;
+                &:hover { text-decoration: underline;}
               }
             }
             ul {
               margin: -10px 0 0;
               li {
+                padding: 5px 10px 5px 0;
                 font-size: 13px;
                 font-weight: 300;
-                a{
-                  color: #555 !important;
+                line-height: 1;
+                a {
+                  color: $dark !important;
                   text-decoration: none;
-                  &:hover {
-                    text-decoration: underline;
-                  }
+                  &:hover { text-decoration: underline;}
                 }
               }
             }
@@ -118,13 +103,12 @@ footer {
 
     .partner-box {
       padding: 0 0 40px;
-      .inner{
-        width: 75%;
+      .inner {
         margin: 0 auto;
         h4 {
           font-family: inherit;
           font-size: 14px;
-          font-weight: 300;
+          font-weight: 400;
           padding: 0 0 15px;
           color: #555;
         }
@@ -132,9 +116,9 @@ footer {
           .wri-logo {
             display: inline-flex;
             height: 70px;
-            width: 269px;
-            background: url('http://gfw-nav.herokuapp.com/assets/logos-seaab571ee0.png') no-repeat;
-            background-position: 0 -516px;
+            width: 270px;
+            background: url('http://gfw-nav.herokuapp.com/assets/logos-sd59f31ac4c.png') no-repeat;
+            background-position: 0 -1711px;
           }
           .address {
             display: inline-block;
@@ -143,28 +127,47 @@ footer {
             text-align: right;
             font-weight: 300;
             line-height: 1;
-            strong, span {
-              display: block;
-            }
+            strong, span {display: block;}
             strong {
+              color: $dark;
               font-weight: 400;
             }
             span {
               margin: 8px 0 0;
+              a {
+                color: $dark !important;
+                text-decoration: underline;
+              }
             }
           }
         }
       }
     }
 
+    .footer-logos-btn {
+      padding: 20px 0;
+      .inner {
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        align-items: stretch;
+        justify-content: space-between;
+        box-align: stretch;
+        box-pack: stretch;
+        span, a {
+          color: $dark !important;
+          font-weight: 400;
+        }
+        span { font-size: 19px;}
+        a:hover { text-decoration: underline;}
+      }
+    }
     .footer-logos {
       .inner {
-        width: 75%;
         margin: 0 auto;
-
         .footer-logo {
           display: block;
-          background: url('http://gfw-nav.herokuapp.com/assets/logos-seaab571ee0.png') no-repeat;
+          background: url('http://gfw-nav.herokuapp.com/assets/logos-sd59f31ac4c.png') no-repeat;
           margin: 0 auto;
           width: 88px;
           position: relative;
@@ -176,92 +179,168 @@ footer {
           transform: translate(0, -50%);
         }
         .wri {
-          height: 31px;
-          width: 269px;
-          background-position: 0 -336px;
+          height: 32px;
+          width: 95px;
+          background-position: 0 -2414px;
+          &:hover { background-position: 0 -1075px;}
         }
         .google {
-          height: 52px;
-          background-position: 0 -1201px;
+          height: 29px;
+          width: 85px;
+          background-position: 0 -2715px;
+          &:hover { background-position: 0 -656px;}
         }
         .esri {
-          height: 28px;
-          background-position: 0 -1076px;
+          height: 33px;
+          width: 87px;
+          background-position: 0 -2381px;
+          &:hover { background-position: 0 -1042px;}
         }
         .universitymaryland {
-          height: 52px;
-          background-position: 0 -969px;
+          height: 51px;
+          width: 56px;
+          background-position: 0 -2034px;
+          &:hover { background-position: 0 -742px;}
         }
         .unep {
-          height: 52px;
-          background-position: 0 -873px;
+          height: 57px;
+          width: 49px;
+          background-position: 0 -1874px;
+          &:hover { background-position: 0 -793px;}
         }
         .imazon {
-          height: 52px;
-          background-position: 0 -1253px;
+          height: 24px;
+          width: 79px;
+          background-position: 0 -2839px;
+          &:hover { background-position: 0 -1484px;}
         }
         .cfgd {
-          height: 52px;
-          background-position: 0 -821px;
+          height: 40px;
+          width: 84px;
+          background-position: 0 -1946px;
+          &:hover { background-position: 0 -850px;}
         }
         .osfac {
-          height: 57px;
-          background-position: 0 -717px;
+          height: 56px;
+          width: 44px;
+          background-position: 0 -2183px;
+          &:hover { background-position: 0 -890px;}
         }
         .gfwca {
           height: 44px;
-          background-position: 0 -925px;
+          width: 42px;
+          background-position: 0 -2580px;
+          &:hover { background-position: 0 -1667px;}
         }
         .scanex {
-          height: 16px;
-          background-position: 0 -1350px;
+          height: 20px;
+          width: 110px;
+          background-position: 0 -2624px;
+          &:hover { background-position: 0 -1313px;}
         }
         .twrus {
-          height: 36px;
-          width: 147px;
-          background-position: 0 -586px;
+          height: 28px;
+          width: 110px;
+          background-position: 0 -2552px;
+          &:hover { background-position: 0 -1285px;}
         }
         .norwegian {
-          height: 55px;
-          background-position: 0 -1021px;
+          height: 46px;
+          width: 110px;
+          background-position: 0 -2137px;
+          &:hover { background-position: 0 -1828px;}
         }
         .usaid {
           height: 64px;
-          background-position: 0 -421px;
+          width: 80px;
+          background-position: 0 -1566px;
+          &:hover { background-position: 0 -549px;}
         }
         .gef {
           height: 59px;
-          background-position: 0 -658px;
+          width: 51px;
+          background-position: 0 -2239px;
+          &:hover { background-position: 0 -983px;}
         }
         .ukaid {
-          height: 52px;
-          background-position: 0 -955px;
+          height: 47px;
+          width: 43px;
+          background-position: 0 -2644px;
+          &:hover { background-position: 0 -1781px;}
         }
         .tilia {
-          height: 38px;
-          background-position: 0 -1366px;
+          height: 25px;
+          width: 67px;
+          background-position: 0 -3013px;
+          &:hover { background-position: 0 -2988px;}
         }
         .goodall {
-          height: 36px;
-          width: 147px;
-          background-position: 0 -622px;
+          height: 26px;
+          width: 110px;
+          background-position: 0 -2962px;
+          &:hover { background-position: 0 -2446px;}
         }
         .cartodb {
-          height: 45px;
-          background-position: 0 -1156px;
+          height: 39px;
+          width: 110px;
+          background-position: 0 -2298px;
+          &:hover { background-position: 0 -1162px;}
         }
         .vizzuality {
-          height: 45px;
-          background-position: 0 -1305px;
+          height: 58px;
+          width: 109px;
+          background-position: 0 -1508px;
+          &:hover { background-position: 0 -491px;}
         }
         .blueraster {
-          height: 45px;
-          width: 97px;
-          background-position: 0 -774px;
+          height: 48px;
+          width: 110px;
+          background-position: 0 -1986px;
+          &:hover { background-position: 0 -1201px;}
+        }
+        .sida {
+          height: 55px;
+          width: 110px;
+          background-position: 0 -1386px;
+          &:hover { background-position: 0 -1107px;}
+        }
+        .danida {
+          height: 15px;
+          width: 82px;
+          background-position: 0 -2824px;
+          &:hover { background-position: 0 -1931px;}
+        }
+        .cgiar {
+          height: 43px;
+          width: 124px;
+          background-position: 0 -1441px;
+          &:hover { background-position: 0 -613px;}
+        }
+        .dutchforeign {
+          height: 80px;
+          width: 106px;
+          background-position: 0 -2744px;
+          &:hover { background-position: 0 -2472px;}
+        }
+        .vizzuality-big {
+          height: 58px;
+          width: 109px;
+          background-position: 0 -1508px;
+          &:hover { background-position: 0 -491px;}
+        }
+        .moore {
+          height: 37px;
+          width: 96px;
+          background-position: 0 -1630px;
+          &:hover{ background-position: 0 -946px;}
+        }
+        .bobolink {
+          height: 53px;
+          width: 105px;
+          background-position: 0 -1333px;
         }
       }
     }
-
     .terms {
       padding: 1em 0;
       font-size: 12px;
@@ -269,9 +348,7 @@ footer {
       text-align: center;
       a {
         color: #555 !important;
-        &:hover {
-          text-decoration: underline;
-        }
+        &:hover { text-decoration: underline;}
       }
     }
   }

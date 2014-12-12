@@ -1,46 +1,30 @@
 .column-24 {
   .header-container {
     padding: 0;
-    .section-header {
-      margin: 20px 0;
-    }
-
-    .icon-help {
-      display: none;
-    }
+    .section-header { margin: 20px 0;}
+    .icon-help { display: none;}
   }
-
   #similar-datasets-region {
     min-width: 980px;
-    .column-4 {
-      padding: 0;
-    }
-
+    .column-4 { padding: 0;}
     ul {
       display: inline-block;
       width: 100%;
       margin: 0;
-
       li {
         display: inline-block;
-        float: initial;
+        float: left;
+        width: auto;
         padding: 0;
         margin: 0 4.5%;
-        &:first-child {
-          margin-left: 0.5%;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-
-        img {
-          border: 0;
-        }
+        &:first-child { margin-left: 0.5%;}
+        &:last-child { margin-right: 0;}
+        img { border: 0;}
       }
     }
     a {
       line-height: 1.5;
-      color: $grey-text !important;
+      color: $dark !important;
     }
   }
 }

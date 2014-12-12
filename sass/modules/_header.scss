@@ -2,7 +2,6 @@
 #map-bar-region {
   margin: 64px 0 0 0;
   border-bottom: 0;
-
   #controls-region {
     position: absolute;
     min-width: 980px;
@@ -12,60 +11,51 @@
     left: auto;
     right: 50%;
     @include transform(translate(50%, 0));
-
     .container {
       margin: 0;
       padding: 0;
       #controls {
         position: relative;
+        right: 0;
         margin: 0;
         border: 1px solid #D9D9D9;
         background: $white;
         #map-type {
+          span { color: $dark;}
           #map-change-size {
             padding-left: 5px;
             border: 1px solid #D9D9D9;
-
-            .map-resize {
-              box-shadow: none;
-            }
+            .map-resize { box-shadow: none;}
           }
         }
       }
     }
   }
-
   #map-div {
     #map-div_zoom_slider {
       position: absolute;
+      min-width: 980px;
+      width: 75%;
       top: auto;
       bottom: 35px;
       left: 50%;
-      @include transform(translate(-50%, 0));
-      min-width: 980px;
-      width: 75%;
       margin: 0;
       padding: 0;
-
+      @include transform(translate(-50%, 0));
       .esriSimpleSliderDecrementButton {
         left: 0;
         border-radius: 0 !important;
         background: $white;
-        &:hover {
-          background: $white;
-        }
+        &:hover { background: $white;}
       }
       .esriSimpleSliderIncrementButton {
         left: 30px;
         border-radius: 0 !important;
         background: $white;
-        &:hover {
-          background: $white;
-        }
+        &:hover { background: $white;}
       }
     }
   }
-
   #locator-region {
     min-width: 980px;
     width: 75%;
@@ -74,12 +64,10 @@
     bottom: 34px;
     margin: 0 auto;
     transform: translate(-50%, 0);
-
     .container {
       margin: 0;
       padding: 0;
     }
-
     #locator {
       position: relative;
       left: 75px;
@@ -87,76 +75,66 @@
       margin: 0;
       background: $white;
       border-radius: 0;
-
-      .icon-search {
-        margin-top: 6px;
-      }
-      #locator-query {
-        border: 1px solid transparent;
-      }
+      .icon-search { margin-top: 6px;}
+      #locator-query { border: 1px solid transparent;}
     }
   }
 }
-
-
 /* Header */
 #banner-container {
   margin: 0 0 40px;
-
   #show-banner-region {
-
-    #main-message, #nav-download, #nav-subscribe {
-      float: none !important;
-    }
-
+    #main-message, #nav-download, #nav-subscribe {float: none !important;}
     .rss-popover {
-      top: 5px;
-      right: 10px;
+      position: absolute;
+      right: 0;
       background: #fff;
-
+      box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+      div { padding: 0 0 10px 0;}
+      #subscribe-help { line-height: 1.5em;}
+      input { width: 65%;}
       .btn {
-        width: 80px;
-        top: 97px !important;
-        left: inherit !important;
-        right: 11px;
+        position: static !important;
+        top: 0 !important;
+        left: 0 !important;
+        float: right;
+        height: 30px;
+        border-radius: 20px;
+        background-color: $white !important;
+        color: $dark;
+        border: 1px solid $cGreen;
+        transform: translateY(2px)
       }
     }
-
     .map-bar-banner {
-
       margin-top: 35px;
       border-bottom: 0;
-
-      .map-bar-title {
-        font-family: inherit !important;
-      }
-
+      .map-bar-title { font-family: inherit !important;}
       .hide{
         display: inline-block !important;
         visibility: visible;
       }
-
       #main-message {
         display: inline-block;
         margin-left: 3px;
         font-size: 37px;
         font-weight: 300;
+        color: $dark;
       }
-
       #dataset-download-container {
         display: inline-block;
         float: right;
-
         .btn {
+          font: normal 13px 'Fira Sans', serif;
           position: absolute;
           top: 58px;
-          left: -4px;
+          left: 4px;
           margin: 0;
-          background-color: $green;
+          background-color: $cGreen;
           box-shadow: none;
           text-shadow: none;
+          font-weight: 500;
         }
-
         #nav-subscribe {
           min-width: 120px;
           width: 100px;
@@ -174,67 +152,44 @@
             top: 3px;
             right: -18px;
           }
-
-          &:hover {
-            text-decoration: none;
-          }
+          &:hover { text-decoration: none;}
         }
-
         #nav-download {
           display: inline-block;
+          background: $dark;
+          border-radius: 20px;
         }
       }
     }
   }
 }
-
 .dataset-left {
   margin: 0;
-  padding: 0 5px;
+  padding: 0;
 }
-
 /* Subheader */
 #sub-nav-region {
   height: 46px;
   border: 0;
   position: static !important;
   margin-bottom: 60px;
-
-  .link, .link.selected {
-    height: 35px;
-  }
+  .link, .link.selected { height: 35px;}
   .link {
     box-sizing: border-box;
     width: 33.3%;
     margin: 0;
-    background: $grey-content !important;
+    background: $gray !important;
     text-transform: uppercase;
     border-bottom: 1px solid #d4d4d4;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    span {
-      color: $grey-title;
-    }
+    span { color: $dark;}
   }
-
   .selected {
     border-bottom: 0;
     background: #fff !important;
-    span{
-      color: $grey-text;
-    }
+    span{ color: $dark;}
   }
-
-
-  .link:first-child {
-    border-right: none;
-  }
-
-  .link:last-child {
-    border-left: none;
-  }
-}
-
-.column-20 {
-  width: 100%;
+  .link:first-child { border-right: none;}
+  .link:last-child { border-left: none;}
 }

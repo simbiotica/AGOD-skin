@@ -1,3 +1,12 @@
+#view-full-description {
+  width: initial;
+  top: 9px;
+  right: 0;
+}
+#dataset-description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 #slide-region {
   position: initial;
   width: 100%;
@@ -11,74 +20,66 @@
     .container {
       margin: 0;
       padding: 0;
-
       .container {
-        width: auto;}
+        width: auto;
+        #dataset-header-row {
+          margin: 0;
+          width: 100%;
+        }
+      }
     }
   }
 }
-
 #show_layout {
   #dets-container {
     padding-left: 5px;
     .attributes-view {
       .section-header {
         text-transform: none;
-        font-weight: 400 !important;
-        color: $grey-title;
+        color: $dark;
       }
-
       .attributes {
         margin-top: 5px;
         font-family: inherit;
-        color: $grey-text;
-
+        color: $dark;
         li {
           border-left: 0;
           border-right: 0;
-
-          .attribute-info {
-            background: none !important;
-          }
-
-          .attribute-info, span {
-            color: $grey-text !important;
-          }
-
-          .attribute-stats {
-            padding: 18px !important;
-          }
-
-          &:nth-child(2n) {
-            background: $grey-content !important;
-          }
+          .attribute-info { background: none !important;}
+          .attribute-info, span { color: $dark !important;}
+          .attribute-stats { padding: 18px !important;}
+          &:nth-child(2n) { background: $gray !important;}
         }
       }
-
       #dataset-description {
         margin-bottom: 20px;
         line-height: 1.5;
-        color: $grey-text;
+        font: normal 13px 'Fira Sans', serif;
+        color: $dark;
+        p { font-size: 14px;}
+        a, * > a {
+          color: $cGreen;
+          font-weight: 400;
+        }
+        b {
+          font: normal 14px 'Fira Sans', serif;
+          color: $dark;
+          font-weight: 500;
+        }
       }
     }
   }
 }
-
 #dataset-attributes-region {
-  li:nth-child(2n) {
-    background: $grey-content !important;
+  #view-full-description {
+    padding: 0;
+    color: $cGreen;
+    text-decoration: none,
   }
+  li:nth-child(2n) { background: $gray !important;}
 }
-
 #dataset-attributes-region {
-  .attribute-info, .attribute-stats {
-    color: $grey-text !important;
-  }
-  .attribute-info {
-    background: none !important;
-  }
+  .attribute-info, .attribute-stats { color: $dark !important;}
+  .attribute-info { background: none !important;}
 }
-
-.table-data-container {
-  margin-left: -2px;
-}
+.table-data-container { margin-left: -2px;}

@@ -1,0 +1,10 @@
+@media (min-width: 1120px) {
+  footer .inner { width: 75%;}
+}
+@media (max-width: 1120px) {
+  footer .inner {
+    width: 95%;
+    &:last-child { width: 80%;}
+  }
+}
+

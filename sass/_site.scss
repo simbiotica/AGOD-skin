@@ -1,27 +1,22 @@
-* {
-  box-sizing: border-box;
-}
-
+* { box-sizing: border-box;}
 body {
   max-width: 1600px;
   min-width: 980px;
   margin: 0 auto;
   font-family:'Fira Sans', sans-serif;
-  color: $grey-text;
+  color: $dark;
   background: rgb(234,234,234);
-
   h1, h2, h3, h4 {
     -webkit-font-smoothing: antialiased;
+    font-weight: 300 !important;
   }
-
   h3 {
     font-family: inherit !important;
-    font-weight: 400 !important;
     text-transform: none !important;
-    color: $grey-title !important;
+    font-weight: 400 !important;
+    color: $dark !important;
   }
 }
-
 .tooltip-header {
   position: absolute;
   background: rgba(#fff,1);
@@ -35,8 +30,11 @@ body {
   left: 50%;
   text-align: center;
   padding: 10px;
+  font-weight: 300;
+  white-space: nowrap;
+  font-size: 12px;
   @include transform(translate(-50%,10px));
-  &:after{
+  &:after {
     content: "";
     display: block;
     position: absolute;
@@ -51,8 +49,6 @@ body {
     border-left: 1px solid #e5e5df;
   }
 }
-
-
 .submenu-tooltip {
   position: absolute;
   min-width: 150px;
@@ -62,11 +58,11 @@ body {
   visibility: hidden;
   text-transform: none;
   font-weight: 300;
-  &.top{
+  &.top {
     top: 100%;
     left: 50%;
     @include transform(translate(-50%,10px));
-    &:after{
+    &:after {
       top: 0;
       left: 50%;
       @include transform(translate(-50%,-50%) rotate(45deg));
@@ -74,11 +70,11 @@ body {
       border-left: 1px solid #e5e5df;
     }
   }
-  &.bottom{
+  &.bottom {
     bottom: 100%;
     left: 50%;
     @include transform(translate(-50%,-10px));
-    &:after{
+    &:after {
       bottom: 0;
       left: 50%;
       @include transform(translate(-50%,50%) rotate(45deg));
@@ -108,9 +104,7 @@ body {
       text-decoration: none;
       text-align: center;
       display: block;
-      &:hover {
-        background: darken(#FFF,2%);
-      }
+      &:hover { background: darken($white,2%);}
     }
   }
 }
