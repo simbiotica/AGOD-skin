@@ -30,6 +30,7 @@ footer {
                 height: 30px;
                 margin-bottom: -9px;
                 fill: #555;
+                transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95)
               }
               h3 {
                 margin-top: 3px;
@@ -143,7 +144,6 @@ footer {
         }
       }
     }
-
     .footer-logos-btn {
       padding: 20px 0;
       .inner {
