@@ -58,7 +58,6 @@ footer {
         }
       }
     }
-
     .site-map {
       padding: 0 0 40px;
       .inner {
@@ -93,6 +92,7 @@ footer {
                 a {
                   color: $dark !important;
                   text-decoration: none;
+                  font-weight: 400;
                   &:hover { text-decoration: underline;}
                 }
               }
@@ -101,7 +101,6 @@ footer {
         }
       }
     }
-
     .partner-box {
       padding: 0 0 40px;
       .inner {
@@ -109,7 +108,7 @@ footer {
         h4 {
           font-family: inherit;
           font-size: 14px;
-          font-weight: 400;
+          font-weight: 400 !important;
           padding: 0 0 15px;
           color: #555;
         }
@@ -128,9 +127,9 @@ footer {
             text-align: right;
             font-weight: 300;
             line-height: 1;
-            strong, span {display: block;}
-            strong {
-              color: $dark;
+            strong,
+            span {
+              display: block;
               font-weight: 400;
             }
             span {
@@ -156,10 +155,16 @@ footer {
         box-pack: stretch;
         span, a {
           color: $dark !important;
-          font-weight: 400;
         }
-        span { font-size: 19px;}
-        a:hover { text-decoration: underline;}
+        span {
+          font-weight: 400;
+          font-size: 19px;
+        }
+        a {
+          font-weight: 300;
+          font-size: 13px;
+          &:hover { text-decoration: underline;}
+        }
       }
     }
     .footer-logos {

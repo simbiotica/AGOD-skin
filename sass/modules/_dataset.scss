@@ -4,8 +4,7 @@
   right: 0;
 }
 #dataset-description {
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-family: 'Fira Sans', Helvetica, sans-serif !important;
 }
 #slide-region {
   position: initial;
@@ -25,6 +24,7 @@
         #dataset-header-row {
           margin: 0;
           width: 100%;
+          #show-download-progress-region { display: none !important;}
         }
       }
     }

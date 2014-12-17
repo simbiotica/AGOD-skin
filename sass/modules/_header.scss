@@ -87,6 +87,7 @@
     #main-message, #nav-download, #nav-subscribe {float: none !important;}
     .rss-popover {
       position: absolute;
+      top: 42px;
       right: 0;
       background: #fff;
       box-shadow:0px 1px 3px rgba(0,0,0,0.25);
@@ -101,61 +102,57 @@
         height: 30px;
         border-radius: 20px;
         background-color: $white !important;
+        line-height: normal;
         color: $dark;
         border: 1px solid $cGreen;
-        transform: translateY(2px)
+        transform: translateY(2px);
+
       }
     }
     .map-bar-banner {
-      margin-top: 35px;
+      margin: 35px 0 0;
+      padding: 0;
       border-bottom: 0;
-      .map-bar-title { font-family: inherit !important;}
+      .map-bar-title {
+        font-family: inherit !important;
+        #nav-back {
+          position: initial;
+        }
+      }
       .hide{
         display: inline-block !important;
         visibility: visible;
       }
       #main-message {
         display: inline-block;
-        margin-left: 3px;
         font-size: 37px;
         font-weight: 300;
         color: $dark;
       }
       #dataset-download-container {
-        display: inline-block;
-        float: right;
-        .btn {
-          font: normal 13px 'Fira Sans', serif;
-          position: absolute;
-          top: 58px;
-          left: 4px;
-          margin: 0;
-          background-color: $cGreen;
-          box-shadow: none;
-          text-shadow: none;
-          font-weight: 500;
-        }
         #nav-subscribe {
-          min-width: 120px;
-          width: 100px;
-          padding: 3px 0;
+          position: absolute;
+          top: 0;
+          right: 0 !important;
+          height: 36px;
+          padding: 0 35px;
           background: #97BD3D;
           border-radius: 20px;
-          font-weight: 100;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 39px;
           text-align: center;
           color: #fff !important;
-          top: 10px;
-          right: 0 !important;
-          &::before {
-            display: none;
-            position: absolute;
-            top: 3px;
-            right: -18px;
-          }
+          &::before { display: none;}
           &:hover { text-decoration: none;}
         }
         #nav-download {
           display: inline-block;
+          top: 0;
+          left: 0;
+          margin: 0;
+          transform: translate(0, 0);
+          line-height: 31px;
           background: $dark;
           border-radius: 20px;
         }
@@ -172,7 +169,7 @@
   height: 46px;
   border: 0;
   position: static !important;
-  margin-bottom: 60px;
+  margin: 12px 0 60px 0;
   .link, .link.selected { height: 35px;}
   .link {
     box-sizing: border-box;
