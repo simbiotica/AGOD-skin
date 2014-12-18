@@ -5,7 +5,6 @@
     .icon-help { display: none;}
   }
   #similar-datasets-region {
-    min-width: 980px;
     .column-4 { padding: 0;}
     ul {
       display: inline-block;
@@ -14,7 +13,6 @@
       li {
         display: inline-block;
         float: left;
-        width: auto;
         padding: 0;
         margin: 0 4.5%;
         &:first-child { margin-left: 0.5%;}

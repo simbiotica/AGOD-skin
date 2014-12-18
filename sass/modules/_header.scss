@@ -1,13 +1,13 @@
 /* Map */
 #map-bar-region {
   margin: 64px 0 0 0;
-  border-bottom: 0;
+  border: 0;
   #controls-region {
     position: absolute;
     min-width: 980px;
     width: 75%;
     top: auto;
-    bottom: 34px;
+    bottom: 36px;
     left: auto;
     right: 50%;
     @include transform(translate(50%, 0));
@@ -31,13 +31,14 @@
       }
     }
   }
+  #locator-region { bottom: 36px !important;}
   #map-div {
     #map-div_zoom_slider {
       position: absolute;
       min-width: 980px;
       width: 75%;
       top: auto;
-      bottom: 35px;
+      bottom: 36px;
       left: 50%;
       margin: 0;
       padding: 0;
