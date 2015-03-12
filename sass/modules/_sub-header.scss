@@ -1,0 +1,227 @@
+// Bottom HEADER
+.layout-header-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  @include clearfix();
+  @media (min-width: $br-mobile){
+    position: relative;
+    background: rgba(#FFF,0.8);
+    border-bottom: 1px solid $border;
+  }
+
+  .inner {
+    position: relative;
+    width: 95%; 
+    margin: 0 auto;
+    @media (min-width: 1400px) {
+      width: 75%;
+    }
+  }
+
+	// Logo
+	h1 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+		text-indent: -9999px;
+		overflow: hidden;
+    z-index: 11;
+    margin: 0 0 0 15px;
+    @include retina-image("http://gfw-nav.herokuapp.com/assets/logo-new-0ea237076d390da17006be0e6c55bc63.png","logo-new@2x.png");
+    @include transition(all 0.25s linear);
+    &.active{
+      opacity: 0;
+      visibility: hidden;
+    }
+    @media (min-width: $br-mobile){
+      width: 90px;
+      height: 90px;
+      margin: 0;
+      &.active{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+		a {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+
+  // Search Widget mobile
+  form{
+    padding: 17px 60px 17px 90px;
+    // border-top: 1px solid #CCC;
+    >input {
+      border: none;
+      border-bottom: 2px solid #B6B6BA;
+      background: none;
+      box-shadow: none;
+      width: calc(100% - 25px);
+      height: 25px;
+      outline: none;
+      margin: 0;
+      padding: 0 5px;
+    }
+    svg {
+      float: left;
+      fill: #B6B6BA;
+    }
+  }
+
+
+	// Nav-right
+	nav {
+		border-bottom: 1px solid #EAECEF;
+    clear: both;
+    padding: 0 0 60px;
+    background: $white;
+    display: none;
+    position: relative;
+    min-height: 100%;
+    &.active{
+      display: block;
+    }
+    @media (min-width: $br-mobile){
+      padding: 0;
+      display: block !important;
+      min-height: 0;
+      clear: none;
+      background: none;
+      border-bottom: none;
+    }
+
+		@include clearfix();
+		>ul {
+      clear: both;
+      margin: 0;
+      @media (min-width: $br-mobile){
+        clear: none;
+        float: right;
+        padding-right: 15px;
+      }
+			>li {
+        position: relative;
+        border-top: 1px solid darken($border,10%);
+        @media (min-width: $br-mobile){
+          float: left;
+          border-top: none;
+          top: 1px;
+          &:hover {
+            z-index: 5;
+            >a{
+              &:after{
+                opacity: 1;
+              }
+            }
+            ul {
+              background: rgba(#fff,0.95);
+              visibility: visible;
+              opacity: 1;
+              li{
+                a{
+                  @include transform(translate(0%,0px));
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+        @media (min-width: $br-tablet){
+          margin: 0 0 0 10px;
+          &:first-child { margin: 0;}
+        }
+
+				>a {
+					display: block;
+					text-transform: uppercase;
+					color: #474747;
+					padding: 20px;
+					position: relative;
+					z-index: 2;
+          text-align: center;
+          background: #F2F2F3;
+          @media (min-width: $br-mobile){
+            background: none;
+          }
+          @media (min-width: $br-tablet){
+            padding: 20px 40px;
+          }
+
+          &:after{
+            content: "";
+            background-color: $cGreen;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            opacity: 0;
+            @include transition(all 0.2s $easeInOutCubic);
+          }
+
+          &.current, &:hover{
+            &:after{
+              opacity: 1;
+            }
+          }
+				}
+				//submenu
+				ul {
+					width: 100%;
+          z-index: 1;
+          position: relative;
+          @media (min-width: $br-mobile){
+            position: absolute;
+            top: 0;
+            left: 50%;
+            min-width: 150px;
+            padding: 56px 0 0;
+            box-shadow: 0 1px 3px rgba(#000,0.25);
+            visibility: hidden;
+            opacity: 0;
+            @include transform(translate(-50%,0px));
+            @include transition(all 0.15s $easeInOutCubic);
+          }
+          @media (min-width: $br-tablet){
+            min-width: 0;
+          }
+
+
+					li {
+            @media (min-width: $br-mobile){
+              border-top: 1px solid rgba(0,0,0,0.07);
+            }
+            @for $i from 1 through 10 {
+              &:nth-child(#{$i}) a{
+                @include transition(all 0.2s $easeInOutSine $i*0.05s);
+              }
+            }
+
+						a {
+							color: $dark;
+							padding: 10px;
+							font-size: 15px;
+							text-align: center;
+							display: block;
+              @media (min-width: $br-mobile){
+                opacity: 0.5;
+                @include transform(translate(-5%,0px));
+              }
+							&:hover {
+								background: darken(#FFF,2%);
+							}
+						}
+					}
+        }
+      }
+    }
+  }
+}

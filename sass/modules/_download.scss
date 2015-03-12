@@ -28,8 +28,11 @@
           text-align: center;
           &:first-child { border-top: none;}
           &:hover { background: darken($white,2%) !important;}
+          
         }
+        &:last-child { display: none !important;}
       }
+      .dl-filtered { display: none !important;}
       .api-options {
         position: absolute;
         top: 191px;

@@ -166,7 +166,7 @@
     position: absolute;
     min-width: 600px;
     z-index: 250;
-    top: -41px;
+    top: -39px;
     left: 31%;
     list-style-type: none;
     transform: translateX(-50%);
@@ -198,11 +198,14 @@
   .col { cursor: pointer;}
   .col6 {
     @include col(50);
-    padding: 20px;
-    @media (min-width: $br-mobile){ padding: 30px 0;}
+    // padding: 20px;
+    // @media (min-width: $br-mobile){ padding: 30px 0;}
     border-left: 1px solid $border;
     &:first-child  { border-left: none; }
     a {
+      display: block;
+      position: relative;
+      padding: 20px 0;
       text-decoration: none;
       &:hover{
         .icon{ background: $dark;}
@@ -226,6 +229,7 @@
       text-align: center;
       text-transform: uppercase;
       font-size: 17px;
+      margin: 0;
       padding: 20px 0 0;
       color: $dark;
       @media (min-width: $br-mobile) { font-size: 24px;}
