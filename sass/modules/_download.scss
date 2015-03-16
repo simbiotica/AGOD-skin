@@ -12,10 +12,11 @@
       left: 4px;
       background: $white;
       box-shadow:0px 1px 3px rgba(0,0,0,0.25);
-      .dl-links{
+      .dl-links, .dl-filtered{
         padding: 0;
         font-size: 15px;
         white-space: nowrap;
+        .hr, .heavy { display: none !important;}
         a,.link, .api {
           display: block;
           width: 100%;
@@ -26,13 +27,13 @@
           border-top: 1px solid #EAECEF;
           text-decoration: none;
           text-align: center;
+          background: #fff !important;
           &:first-child { border-top: none;}
           &:hover { background: darken($white,2%) !important;}
           
         }
         &:last-child { display: none !important;}
       }
-      .dl-filtered { display: none !important;}
       .api-options {
         position: absolute;
         top: 191px;
