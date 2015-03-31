@@ -7,15 +7,23 @@ body {
   color: $dark;
   background: rgb(234,234,234);
   -webkit-font-smoothing: antialiased;
-  h1, h2, h3, h4 {
-    -webkit-font-smoothing: antialiased;
-    font-weight: 300 !important;
+  // h1, h2, h3, h4 {
+  //   -webkit-font-smoothing: antialiased;
+  //   font-weight: 300;
+  // }
+  // h3 {
+  //   font-family: inherit !important;
+  //   text-transform: none !important;
+  //   font-weight: 400 !important;
+  //   color: $dark !important;
+  // }
+  .container { 
+    width: 100%;
   }
-  h3 {
-    font-family: inherit !important;
-    text-transform: none !important;
-    font-weight: 400 !important;
-    color: $dark !important;
+
+  footer { 
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 .tooltip-header {
@@ -83,7 +91,7 @@ body {
       border-right: 1px solid #e5e5df;
     }
   }
-  @include transition(all 0.15s ease-in-out);
+  //@include transition(all 0.15s ease-in-out);
   &:after {
     content: "";
     display: block;
@@ -94,9 +102,11 @@ body {
     z-index: 2;
   }
   li {
+    display: block;
+    margin: 0;
     border-top: 1px solid #EAECEF;
     font-size: 15px;
-    white-space: nowrap;
+    // white-space: nowrap;
     &:first-child { border-top: none;}
     a,.link {
       color: #444;

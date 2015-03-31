@@ -4,26 +4,18 @@
     .section-header { margin: 20px 0;}
     .icon-help { display: none;}
   }
-  #similar-datasets-region {
-    .column-4 { padding: 0;}
-    ul {
-      display: inline-block;
-      width: 100%;
-      margin: 0;
-      li {
-        display: inline-block;
-        float: left;
-        padding: 0;
-        margin: 0 4.5%;
-        &:first-child { margin-left: 0.5%;}
-        &:last-child { margin-right: 0;}
-        img { border: 0;}
-      }
-    }
-    a {
-      max-width: 200px;
-      line-height: 1.5;
-      color: $dark !important;
+}
+#similar-datasets-region {
+  display: inline-flex;
+  overflow: visible;
+  margin-left: 12px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      padding: 0;
+      img { border: 0;}
+      a { color: $dark !important;}
     }
   }
 }

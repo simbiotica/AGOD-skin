@@ -5,3 +5,66 @@
   font-size: 12px !important;
   line-height: 3em !important;
 }
+
+#charts {
+	.btn-group {
+		.btn {
+			bottom: 0;
+			&:hover { 
+				background-color: transparent;
+				box-shadow: none;
+			}
+			#selected-attribute {
+				position: absolute;
+				top: 0;
+				left: 5%;
+				&:hover { box-shadow: none;}
+			}
+		}
+		.caret {
+			float: none;
+			position: absolute;
+			top: 50%;
+			right: 11px;
+			margin: 0;
+			@include transform(translate(-50%, -50%));
+			color: $dark;
+		}
+		.dropdown-menu { padding: 0;}
+		.dropdown-toggle { box-shadow: none;}
+	}
+	#chart-type-list li:hover { color: $cGreen;}
+	.chart-container {
+		#chart-render-error-container {
+			#chart-render-error-message { color: $dark !important;}
+			#ok-chart-error { display: none;}
+		}
+		#chart-controls {
+			#chart-embed-container {
+				span {
+					left: auto;
+					right: -62px;
+					background: transparent;
+	        color: $dark;
+	        line-height: 27px;
+	        border-color: $cGreen;
+	        &:hover { background: $gray;}
+				}
+				#chart-share-popover {
+					width: 285px;
+					top: -185px;
+					height: 105px;
+					background-color: $white;
+					#embed-input #copy-embed-link {
+  					top: 57px;
+						right: -26px;
+						height: 30px;
+						line-height: 21px;
+					}
+				}
+			}
+		}
+		
+	}
+} 
+
