@@ -213,7 +213,10 @@
                 color: $dark;
                 border-color: $cGreen;
                 &:hover { background: $gray;}
-              } 
+              }
+              #share-link, #embed-link {
+                color: $dark;
+              }
             }
           }
         }

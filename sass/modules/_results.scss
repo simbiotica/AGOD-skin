@@ -79,26 +79,28 @@
 
               .api-text { 
                 margin: 0;
-                line-height: 32px;
+                line-height: 38px;
               }
 
               input { 
                 width: 210px;
-                height: 28px;
+                height: 30px;
+                box-shadow: 0 0 3px #ccc inset;
                 &:focus { outline: none;}
               }
 
               #copy-api-link, #copy-geojson-link {
                 display: inline-block;
-                height: 28px;
+                height: 30px;
                 padding: 6px 12px;
-                margin-top: 4px;
+                margin-top: 3px;
                 color: $dark;
-                line-height: 16px;
+                line-height: 18px;
                 font-size: 12px;
                 background-color: transparent;
                 border-color: $cGreen;
                 &:hover { background-color: $gray;}
+                &:focus { outline: none;}
               }
               
             }
