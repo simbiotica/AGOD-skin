@@ -4,10 +4,15 @@
 #search-results-region {
   min-height: 0;
   .dataset-thumb img, li { border: 0;}
-  img { height: 67px !important;}
+  img { 
+    height: 67px !important;
+    margin-bottom: 6px;
+  }
   li {
+    width: 80%;
     height: initial !important;
-    width: 95%;
+    padding: 40px 0 !important;
+    border: none !important;
     .snippet {
       a {
         overflow: hidden;
@@ -30,9 +35,8 @@
     }
   }
   .invisible-container {
-    top: 28px;
-    bottom: 0;
-    right: 0;
+    top: 44px;
+    right: -173px;
     .card-info-container {
       background: none;
       .attributes {
@@ -40,7 +44,69 @@
         border-right: 0;
         text-transform: uppercase;
       }
+      .opendata-star-hollow:focus { outline: none;}
+
+      .action-icons {
+        position: relative;
+        &:hover { color: $cGreen;}
+        .icon-download:focus { outline: none;}
+        .popover { 
+          left: 50% !important;
+          @media (max-width: 980px) {
+            left: -55px !important;
+            .arrow { left: 83% !important;}
+          }
+          @include transform(translate(-50%, 0));
+          padding-top: 0;
+          border-radius: 0;
+          .popover-content {
+            padding: 0;
+            .dl-links { 
+              a, span { 
+                display: inline-flex;
+                border-top: 0;
+              } 
+              a:hover, span:hover { background: #fafafa;}
+            }
+
+            .api-options {
+              top: 100% !important;
+              right: 0 !important;
+              width: 450px;
+              @include transform (translate(0, 20%));
+              .row {
+              }
+
+              .api-text { 
+                margin: 0;
+                line-height: 32px;
+              }
+
+              input { 
+                width: 210px;
+                height: 28px;
+                &:focus { outline: none;}
+              }
+
+              #copy-api-link, #copy-geojson-link {
+                display: inline-block;
+                height: 28px;
+                padding: 6px 12px;
+                margin-top: 4px;
+                color: $dark;
+                line-height: 16px;
+                font-size: 12px;
+                background-color: transparent;
+                border-color: $cGreen;
+                &:hover { background-color: $gray;}
+              }
+              
+            }
+          }
+        }
+      }
     }
+
     .download-popover {
       padding: 0;
       .dl-links {
@@ -67,6 +133,7 @@
         box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
         transform: translate(-44.5%, 0);
         .row { margin: 0;}
+        input { color: $dark;}
         .copy-link {
           position: initial;
           float: right !important;
@@ -83,17 +150,20 @@
     }
   }
   .result-main {
+    // float: left;
+    margin-left: 0;
     font-family: 'Fira Sans';
-    position: static !important;
     .snippet { height: initial;}
     .snippet, .snippet > a {
+      position: static;
+      width: auto;
       font-size: 15px;
       color: $dark;
     }
   }
   .card-title {
     font-family: inherit;
-    max-width: 70%;
+    max-width: 90%;
     a {
       color: $dark;
       &:visited { color: $dark;}
@@ -124,12 +194,22 @@
   margin-top: 15px;
   text-align: center;
   #pagination {
-    #page-prev, .pagination-results,
-    #page-next {
-       display: inline-block;
-       float: none;
-       color: $dark;
-    }
+    #page-prev { float: left;}
+    #page-next { float: right;}
+
+    li {
+      > a {
+        color: $dark;
+        border: none;
+        &:hover { background-color: transparent;}
+      }
+      &.active > a {
+        border-bottom: 2px solid $cGreen;
+        background-color: transparent;
+      }
+    } 
+      
+
     .pagination-results {
       margin: 0;
       .page, a {
@@ -159,6 +239,22 @@
     a {
       font: normal 13px 'Fira Sans', serif;
       font-weight: 300;
+    }
+  }
+}
+
+#show-banner-region{
+  .download-popover-container {
+    .download-popover {
+      .api-options {
+        .row {
+          .api-text { line-height: 43px !important;}
+          .btn {
+            line-height: 20px !important;
+            margin: 6px 0 0 ;
+          }
+        }
+      }
     }
   }
 }

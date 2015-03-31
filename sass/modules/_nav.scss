@@ -4,8 +4,13 @@
   box-shadow: none;
   background: #f7f7f7;
   .container {
-    max-width: none;
+    width: 100% !important;
     padding: 0;
+    .row { 
+      margin: 0;
+      .col-xs-12 { padding: 0;}
+    }
+    #home-link-region { margin: 0;}
   }
   .row { position: static;}
   a { color: $dark !important;}
@@ -36,7 +41,7 @@
                   width: 25px;
                   height: 25px;
                   fill: #B6B6BA;
-                  transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+//                  transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
                   &.world { transform: scale(.9);}
                 }
                 &:hover {
@@ -282,17 +287,18 @@
 }
 #title-bar-region {
   z-index: 0;
+  min-height: 0;
   font-family: 'Fira Sans', serif !important;
   box-shadow: none;
   border-bottom: 1px solid $border;
   background-color: #F7F7F7;
   .container {
-    min-width: 980px;
-    width: 75%;
+    // min-width: 980px;
+    width: 91%;
     margin: 0;
     padding: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    // left: 55%;
+    // @include transform-translate(-50%, 0);
   }
   #search-input-wrapper,.search-nav-item {
     position: initial !important;
@@ -315,8 +321,8 @@
   input { background-image: none;}
   #title-bar-inner {
     position: relative;
-    min-height: 38px;
-    margin: 10px 0 0;
+    min-height: 70px;
+    margin: 5px 0 0;
     #refine-region {
       display: inline-block !important;
       width: 50%;
@@ -324,7 +330,6 @@
       margin: 0;
       .container {
         display: inline-block;
-        position: relative;
         left: 50%;
         min-width: 0;
         width: auto;
@@ -358,10 +363,12 @@
     }
     #search-region {
       position: absolute;
+      top: 50%;
+      right: 0;
+      @include transform(translate(0, -50%));
       display: inline-flex;
       align-items: center;
-      right: 0;
-      top: 0;
+      float: right;
       #search-input-wrapper {
         width: initial;
         height: initial;
@@ -375,15 +382,23 @@
           opacity: .4;
           vertical-align: middle;
         }
-        form { display: inline-flex;}
+        form { 
+          display: inline-flex;
+          #gsearch {
+            box-shadow: none;
+            background-image: none;
+          }
+        }
       }
       #search-results-extent-button-region {
         min-width: 0;
-        .icon-unchecked {
-          text-transform: none;
-          font-weight: 300;
+        .icon-unchecked, .icon-checked {
+          text-transform: none !important;
+          // font-weight: 300;
         }
       }
     }
+
+    #activities-region { display: none;}
   }
 }

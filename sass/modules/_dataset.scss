@@ -9,24 +9,28 @@
 #slide-region {
   position: initial;
   width: 100%;
+
   .layout {
-    position: relative;
-    left: 50%;
-    min-width: 980px;
-    width: 75%;
-    margin: 0;
-    transform: translateX(-50%);
-    .container {
-      margin: 0;
-      padding: 0;
-      .container {
-        width: auto;
-        #dataset-header-row {
-          margin: 0;
-          width: 100%;
-          #show-download-progress-region { display: none !important;}
+    #page-content {
+      & > .container { width: 95%;}
+    }
+    #dataset-header-row {
+      .btn { 
+        border: none;
+        box-shadow: none;
+      }
+      .dropdown-menu {
+        top: 0;
+        left: 50%;
+        padding: 0;
+        @include transform-translate(-50%, 0);
+        box-shadow: 0 -2px 3px rgba(0,0,0,0.25);
+        a { 
+          padding: 8px 55px;
+          transition: all 150ms linear;
         }
       }
+      #show-download-progress-region { display: none !important;}
     }
   }
 }
@@ -34,10 +38,6 @@
   #dets-container {
     padding-left: 5px;
     .attributes-view {
-      .section-header {
-        text-transform: none;
-        color: $dark;
-      }
       .attributes {
         margin-top: 5px;
         font-family: inherit;
@@ -45,7 +45,7 @@
         li {
           border-left: 0;
           border-right: 0;
-          .attribute-info { background: none !important;}
+          .attribute-info {  background: none !important;}
           .attribute-info, span { color: $dark !important;}
           .attribute-stats { padding: 18px !important;}
           &:nth-child(2n) { background: $gray !important;}
@@ -80,6 +80,16 @@
 }
 #dataset-attributes-region {
   .attribute-info, .attribute-stats { color: $dark !important;}
-  .attribute-info { background: none !important;}
+  .attribute-info { 
+    border-right: 0;
+    background: none !important;
+  }
 }
 .table-data-container { margin-left: -2px;}
+
+
+.section-header {
+  text-transform: none;
+  font-weight: 400;
+  color: $dark;
+}

@@ -1,4 +1,5 @@
 #saved-layers {
+  min-height: 0;
   background: none;
   border: 0;
   #my-layers, h4 { font-family: inherit !important;}
@@ -15,6 +16,7 @@
         color: $dark;
         font-style: normal;
       }
+      a { margin-left: 16px !important;}
       .fav-check {
         float: none;
         margin: 0 0 0 10px;
@@ -24,7 +26,7 @@
           background: none;
         a {
           position: absolute;
-          max-width: 95%;
+          max-width: 80%;
           left: 30px;
           margin: 0;
         }

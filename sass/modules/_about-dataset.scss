@@ -31,10 +31,15 @@
   #dataset-meta-list {
     margin: 0 0 15px 0 !important;
     padding: 0;
-    a {
-      font-weight: 400;
-      color: $cGreen;
+    li {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      a {
+        font-weight: 400;
+        color: $cGreen;
+      }
+      .info-name, .no-license { color: $dark;}  
     }
-    .info-name, .no-license { color: $dark;}
+    
   }
 }

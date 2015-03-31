@@ -2,12 +2,22 @@
   #slide-region {
     width: 100%;
     font-weight: 400;
+    h3 {
+      font-family: inherit !important;
+      text-transform: none !important;
+      font-weight: 400 !important;
+      color: $dark !important;
+    }
     #slide-me {
+      position: initial;
+      left: 0;
       width: 100%;
+      transform: none;
       #page-content {
         max-width: 1600px;
         .container {
-          max-width: inherit;
+          width: 100% !important;
+          padding: 0;
           .row {
             margin: 0 auto;
             section { background: $gray;}
@@ -166,12 +176,14 @@
     position: absolute;
     min-width: 600px;
     z-index: 250;
-    top: -39px;
+    top: -67px;
     left: 31%;
     list-style-type: none;
     transform: translateX(-50%);
     ul {
+      max-width: 80%;
       li {
+        position: relative;
         display: inline-flex;
         margin: 0 3px 10px 0;
         padding: 0 12px;
@@ -180,10 +192,13 @@
         background: #F7F7F7;
         font-size: 0.875em;
         .icon-plus {
-          padding-right: 4px;
+          position: absolute;
+          top: 50%;
+          @include transform-translate(0, -50%);
           font-size: 0.6em;
         }
         .tag-name {
+          padding-left: 12px;
           a {
             color: $dark;
             &:hover { text-decoration: underline;}
@@ -194,10 +209,11 @@
   }
 }
 .main-apps  {
-  .row { @include row();}
+  //.row { @include row();}
   .col { cursor: pointer;}
   .col6 {
     @include col(50);
+    float: left;
     // padding: 20px;
     // @media (min-width: $br-mobile){ padding: 30px 0;}
     border-left: 1px solid $border;
