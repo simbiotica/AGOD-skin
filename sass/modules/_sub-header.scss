@@ -31,7 +31,7 @@
 		text-indent: -9999px;
     z-index: 11;
     margin: 0 0 0 15px;
-    @include retina-image("http://gfw-nav.herokuapp.com/assets/logo-new-0ea237076d390da17006be0e6c55bc63.png","logo-new@2x.png");
+    @include retina-image("http://www.globalforestwatch.org/assets/logo-new-b989ed109810f4bc3ddfe0fb21d204bd.png","http://www.globalforestwatch.org/assets/logo-new@2x-48378249f7443b839786d4bef44a28d4.png");
     @include transition(all 0.25s linear);
     &.active{
       opacity: 0;
@@ -59,7 +59,7 @@
       position: absolute;
       bottom: -5px;
       right: -5px;
-      background: url("http://gfw-nav.herokuapp.com/assets/beta-b6686fd9056621b7c40724f9da4917c7.png");
+      background: url("http://www.globalforestwatch.org/assets/beta-0f708993745bb2cfb5f868ff7940c46f.png");
     }
 	}
 
