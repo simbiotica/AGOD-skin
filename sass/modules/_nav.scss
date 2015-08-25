@@ -318,6 +318,9 @@
     font-weight: 300;
     background-color: transparent;
   }
+  .twitter-typeahead  {
+    height: auto;
+  }
   input { background-image: none;}
   #title-bar-inner {
     position: relative;
@@ -362,12 +365,8 @@
       }
     }
     #search-region {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      @include transform(translate(0, -50%));
-      display: inline-flex;
-      align-items: center;
+      position: relative;
+      top: 20px;
       float: right;
       #search-input-wrapper {
         width: initial;
