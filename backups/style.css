@@ -1,5 +1,5 @@
-@import url('http://fonts.googleapis.com/css?family=Fira+Sans:300, 400, 500');
-* {
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300, 400, 500);
+    * {
     box-sizing: border-box;
 }
 .chosen-container {
@@ -2785,7 +2785,7 @@ footer .inner:last-child {
     background: url("http://gfw-nav.herokuapp.com/assets/logo-new-f7a24c58c6bdeccd404973425e184f46.png") no-repeat;
 }
 #title-bar-region {
-    z-index: 20;
+    z-index: 5;
     min-height: 0;
     font-family: 'Fira Sans',  serif !important;
     box-shadow: none;
@@ -2909,9 +2909,6 @@ border: 1px solid #79C200;
 color: #5A5C59;
 letter-spacing: 1px;
 border-radius: 20px;
-height: auto;
-position: relative;
-top: 0;
 }
 #activities-region .btn:hover, #activities-umbrella-region .btn:hover {
   background: #FFF;

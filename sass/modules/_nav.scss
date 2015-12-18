@@ -13,7 +13,7 @@
     #home-link-region { margin: 0;}
   }
   .row { position: static;}
-  a { color: $dark !important;}
+  .layout-header-bottom a { color: $dark !important;}
   #people-navigation-region { padding: 0;}
   .column-16 {
     width: 100%;
@@ -286,7 +286,7 @@
   }
 }
 #title-bar-region {
-  z-index: 5;
+  z-index: 20;
   min-height: 0;
   font-family: 'Fira Sans', serif !important;
   box-shadow: none;
